@@ -14,8 +14,8 @@
 
 library(data.table)
 library(tidyverse)
-library(my.utils)
 library(Rfast)
+library(my.utils)
 
 ############################################################################## # 
 ##### settings #################################################################
@@ -115,8 +115,8 @@ product_fp_intensity <- CS %*% data$L # fp = C * S * L
 dim(product_fp_intensity)
 
 # national fp's
-national_fp <- data$L 
-`%*%`(., (data$Y[,EB3_metadata$colnamesY$id_orig])) %>% 
+national_fp <- data$L %>%  
+`%*%`(., (data$Y[,EB3_metadata$colnamesY$id_orig])) %>%
   `%*%`(CS, .) # fp = CSLY
 dim(national_fp)
 

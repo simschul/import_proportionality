@@ -83,7 +83,8 @@ colnames_Y <- data.table("country" = rep(EB3_metadata$regions$country_name, each
 
 
 path2results <- get_last_modified_file("results", TRUE)
-path2suppl <- '/home/simon/Documents/PhD_PROSET/tex/import_proportionality/supplementary'
+path2suppl <- tempdir()
+  #'/home/simon/Documents/PhD_PROSET/tex/import_proportionality/supplementary'
 
 ############################################################################## # 
 ##### load data #############################################################

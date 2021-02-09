@@ -8,4 +8,17 @@ This repository contains all code to reproduce the results from our paper on 'Re
 
 The individual scripts should be run according to their numbering. Note, that for running the script you need the 2011 table from EXIOBASE Version 3.4 in the industry-by-industry version. You can find it on https://exiobase.eu/. 
 
-For questions you can contact me via [e-mail]{mailto:s.pedro@gmx.de} or raise an issue on github. 
+For questions you can contact me via [e-mail](mailto:s.pedro@gmx.de) or raise an issue on github. 
+
+
+All code was tested with the following setup:
+
+```{r, include=FALSE}
+source('./packages.R')
+```
+
+
+```{r, echo=FALSE}
+sessionInfo()
+```
+

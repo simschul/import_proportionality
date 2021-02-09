@@ -226,33 +226,7 @@ product_fp_97.5 <- lapply(product_fp_97.5, as.data.table) %>%
   .[, "id" := rep(1:7987, times = length(midpoints_selected))]
 saveRDS(product_fp_97.5, file.path(path2results, "product_fp_97.5.RData"))
 
-#### boxplot stats ----------------------------------------------------
-.calc_varcoef_fun <- function(i) {
-  res <- files %>% 
-    lapply(., function(x) {
-      x %>% 
-        readRDS %>% 
-        .[i,]
-    }) %>% 
-    do.call(cbind, .) %>% 
-    apply(., 1, boxplot.stats)
-  gc()
-  return(res)
-}
-product_fp_boxplot <- pbmclapply(1:4, .calc_varcoef_fun, mc.cores = 2)
 
-ggplot(product_fp_boxplot[[1]][[1000]])
-test <- do.call(rbind, product_fp_boxplot[[1]])
-
-product_fp_boxplot <- lapply(product_fp_boxplot, as.data.table) %>% 
-  setNames(midpoints_labels$FootprintNames_EN) %>% 
-  rbindlist(idcol = "fp_type") %>% 
-  setnames("V1", "value") %>% 
-  .[, "id" := rep(1:7987, times = length(midpoints_selected))]
-product_fp[value == max(value)]
-
-product_fp[, rank := frankv(value, order = -1), by = fp_type]
-product_fp[rank == 1]
 
 # THE END ---------------------------------------------------------------------
 

@@ -150,6 +150,7 @@ isectors <- lapply(product_fp_split, function(x) {
   x[rank < 6 | (fp_eb_total > median(fp_eb_total) & 
                   value > 0.75*max(value))]
 })
+files <- list.files(path2results, pattern = "product_fp[0-9]", full.names = TRUE) 
 
 product_fp_selected <- files %>% 
   lapply(., function(x) {

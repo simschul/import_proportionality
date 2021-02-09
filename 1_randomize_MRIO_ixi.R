@@ -5,6 +5,9 @@
 #' Date: 2019-10-31 16:55:52
 #' 
 #' Content:
+#' 
+#' NOTE: This script was run on the BWunicluster in parallel on 12 nodes with 62000 MB
+#' per node
 #'  
 
 
@@ -23,9 +26,10 @@ library(Rfast)
 ##### settings #################################################################
 ############################################################################## # 
 
-getwd()
-setwd("./trade_split")
-getwd()
+# set to TRUE when running on cluster
+if(FALSE) {  
+  setwd("./trade_split")
+}
 
 source("./settings.R")
 source("./functions.R")
