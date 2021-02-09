@@ -208,6 +208,7 @@ imp_shares_product <- lapply(1:nrow(CS), function(i) {
 }) %>% 
   setNames(midpoints_labels$FootprintNames_EN)
 
+
 imp_shares_product <- rbindlist(imp_shares_product, idcol = 'fp_type')
 setnames(imp_shares_product, 'country_code2_product', 'country_code2')
 saveRDS(imp_shares_product, 'results/imp_shares_product.RData')
