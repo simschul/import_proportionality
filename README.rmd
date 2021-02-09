@@ -1,4 +1,6 @@
-
+---
+output: rmarkdown::github_document
+---
 # Import Proportionality Assumption in MRIO
 
 <!-- badges: start -->
