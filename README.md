@@ -7,8 +7,35 @@
 
 This repository contains all code to reproduce the results from our
 paper on ‘Relaxing the import proportionality assumption in
-multi-regional input-output anlysis’ published in the Journal of
+multi-regional input-output anlysis’ submitted to the Journal of
 Economic Structures.
+
+## Abstract
+
+In the absence of data on the destination industry of international
+trade flowsmost multi-regional input-output (MRIO) tables are based on
+the importproportionality assumption. Under this assumption imported
+commodities areproportionally distributed over the target sectors
+(individual industries and finaldemand categories) of an importing
+region.Here, we quantify the uncertainty arising from the import
+proportionalityassumption on the four major environmental footprints of
+the different regionsand industries represented in the MRIO database
+EXIOBASE. We randomise theglobal import flows by applying an algorithm
+that randomly assigns importedcommodities block-wise to the target
+sectors of an importing region, whilemaintaining the trade balance.We
+find the variability of the national footprints in general below a
+coefficientof variation (CV) of 4%, except for the material, water and
+land footprints ofhighly trade-dependent and small economies. At the
+industry level the variabilityis higher with 25% of the footprints
+having a CV above 10% (carbon footprint),and above 30% (land, material
+and water footprint), respectively, with maximumCVs up to 394%.We
+provide a list of the variability of the national and industry
+environmentalfootprints in the online SI so that MRIO scholars can check
+if a industry/regionthat is important in their study ranks high, so that
+either the database can beimproved through adding more details on
+bilateral trade, or the uncertainty canbe calculated and reported.
+
+## How to use the scripts
 
 The individual scripts should be run according to their numbering. Note,
 that for running the script you need the 2011 table from EXIOBASE
